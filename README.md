@@ -73,6 +73,7 @@ WHERE
     start_date) > 12 
 ```
 ```sql
+#standardSQL
 SELECT
   count(trip_id)
 FROM
@@ -336,6 +337,7 @@ FROM
 As we can see from the table, the maximum amount is at station 91, with 35 docks available. From the questions below, we know that 91 has low bike availability as well, which indicates a good use of this resource. The minimum number of docking stations are 11 stations, 4, 32, 35, and 37. None of these seem to be particularly popular, which is also an indicator of a good use of the inventory. 
 
 ```sql
+#standardSQL
 SELECT
   MAX(dockcount), station_id
 FROM
@@ -350,6 +352,7 @@ ORDER BY
 These stations are 51, 62, 61, 60, 59, and 58. Interestingly, they don't match with the stations that have the lowest bike availability. They have 19, 19, 27, 15, 23, and 19 docking stations available, respectively. None of these stations have as many as the maximum (35). 
 
 ```sql
+#standardSQL
 SELECT
   MIN(docks_available), station_id
 FROM
@@ -365,6 +368,7 @@ ORDER BY
 The top stations are 83, 24, 22, 21, 14, and 29. Interestingly, they don't match with the stations that have the lowest bike availability. 
 
 ```sql
+#standardSQL
 SELECT
   MAX(docks_available), station_id
 FROM
